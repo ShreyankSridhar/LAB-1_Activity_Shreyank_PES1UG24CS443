@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="720" viewBox="0 0 1180 720" role="img" aria-labelledby="title desc">
+  <title id="title">Pharmacy Expiry and Re-order Dispatch Engine use-case diagram</title>
+  <desc id="desc">Pharmacy Clerk and Inventory Supplier interact with seven system use cases. FEFO includes expiry monitoring; order dispatch includes threshold checking; approval and acknowledgement extend order dispatch.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#27364b"/></marker>
+    <style>text{font-family:Arial,sans-serif;fill:#172033}.label{font-size:17px;font-weight:bold}.small{font-size:14px}.actor{stroke:#27364b;stroke-width:2;fill:none}.link{stroke:#27364b;stroke-width:2;fill:none}.relation{stroke:#485b73;stroke-width:2;stroke-dasharray:7 5;fill:none;marker-end:url(#arrow)}.uc{fill:#f5f8fc;stroke:#285a9e;stroke-width:2}.boundary{fill:#fbfdff;stroke:#6385b7;stroke-width:2}</style>
+  </defs>
+  <rect class="boundary" x="250" y="35" width="680" height="640" rx="8"/>
+  <text x="590" y="66" text-anchor="middle" class="label">Pharmacy Expiry &amp; Re-order Dispatch Engine</text>
+  <circle class="actor" cx="105" cy="165" r="18"/><path class="actor" d="M105 183V242M78 202H132M105 242L78 280M105 242L132 280"/><text x="105" y="310" text-anchor="middle" class="label">Pharmacy Clerk</text>
+  <circle class="actor" cx="1075" cy="385" r="18"/><path class="actor" d="M1075 403V462M1048 422H1102M1075 462L1048 500M1075 462L1102 500"/><text x="1075" y="530" text-anchor="middle" class="label">Inventory Supplier</text>
+  <ellipse class="uc" cx="420" cy="135" rx="125" ry="40"/><text x="420" y="141" text-anchor="middle">Record Batch Receipt</text>
+  <ellipse class="uc" cx="690" cy="135" rx="115" ry="40"/><text x="690" y="141" text-anchor="middle">Monitor Batch Expiry</text>
+  <ellipse class="uc" cx="420" cy="275" rx="130" ry="43"/><text x="420" y="270" text-anchor="middle">Generate FEFO</text><text x="420" y="291" text-anchor="middle">Dispensing List</text>
+  <ellipse class="uc" cx="690" cy="275" rx="125" ry="43"/><text x="690" y="270" text-anchor="middle">Check Re-order</text><text x="690" y="291" text-anchor="middle">Threshold</text>
+  <ellipse class="uc" cx="485" cy="440" rx="135" ry="48"/><text x="485" y="434" text-anchor="middle">Generate &amp; Dispatch</text><text x="485" y="455" text-anchor="middle">Purchase Order</text>
+  <ellipse class="uc" cx="790" cy="430" rx="115" ry="40"/><text x="790" y="435" text-anchor="middle">Approve Purchase Order</text>
+  <ellipse class="uc" cx="780" cy="575" rx="125" ry="43"/><text x="780" y="570" text-anchor="middle">Receive Supplier</text><text x="780" y="591" text-anchor="middle">Acknowledgement</text>
+  <path class="link" d="M135 175L295 145M135 200L294 270M135 225L565 275M135 250L350 432M135 278L675 430"/>
+  <path class="link" d="M955 440L905 510L865 555"/>
+  <path class="relation" d="M485 245L610 170"/><text x="535" y="198" class="small">«include»</text>
+  <path class="relation" d="M580 400L650 310"/><text x="610" y="355" class="small">«include»</text>
+  <path class="relation" d="M675 435L620 440"/><text x="620" y="418" class="small">«extend»</text>
+  <path class="relation" d="M730 545L580 475"/><text x="645" y="530" class="small">«extend»</text>
+</svg>

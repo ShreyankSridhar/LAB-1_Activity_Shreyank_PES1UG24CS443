@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Pharmacy Clerk" as Clerk
+actor "Inventory Supplier" as Supplier
+
+rectangle "Pharmacy Expiry &\nRe-order Dispatch Engine" {
+  usecase "Record Batch Receipt" as UC1
+  usecase "Monitor Batch Expiry" as UC2
+  usecase "Generate FEFO\nDispensing List" as UC3
+  usecase "Check Re-order\nThreshold" as UC4
+  usecase "Generate & Dispatch\nPurchase Order" as UC5
+  usecase "Approve Purchase Order" as UC6
+  usecase "Receive Supplier\nAcknowledgement" as UC7
+}
+
+Clerk --> UC1
+Clerk --> UC2
+Clerk --> UC3
+Clerk --> UC4
+Clerk --> UC5
+Clerk --> UC6
+Supplier --> UC7
+
+UC3 .> UC2 : <<include>>
+UC5 .> UC4 : <<include>>
+UC6 .> UC5 : <<extend>>
+UC7 .> UC5 : <<extend>>
+@enduml
