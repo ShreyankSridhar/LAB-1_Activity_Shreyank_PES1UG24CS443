@@ -11,8 +11,11 @@ rectangle "Pharmacy Expiry &\nRe-order Dispatch Engine" {
   usecase "Generate FEFO\nDispensing List" as UC3
   usecase "Check Re-order\nThreshold" as UC4
   usecase "Generate & Dispatch\nPurchase Order" as UC5
-  usecase "Approve Purchase Order" as UC6
-  usecase "Receive Supplier\nAcknowledgement" as UC7
+  usecase "Generate Purchase Order" as UC6
+  usecase "Approve Purchase Order" as UC7
+  usecase "Dispatch Purchase Order" as UC8
+  usecase "Receive Supplier\nAcknowledgement" as UC9
+  usecase "Retry Failed Dispatch" as UC10
 }
 
 Clerk --> UC1
@@ -21,10 +24,16 @@ Clerk --> UC3
 Clerk --> UC4
 Clerk --> UC5
 Clerk --> UC6
-Supplier --> UC7
+Clerk --> UC7
+Clerk --> UC8
+Clerk --> UC10
+Supplier --> UC9
 
 UC3 .> UC2 : <<include>>
 UC5 .> UC4 : <<include>>
-UC6 .> UC5 : <<extend>>
-UC7 .> UC5 : <<extend>>
+UC5 .> UC6 : <<include>>
+UC5 .> UC7 : <<include>>
+UC5 .> UC8 : <<include>>
+UC8 .> UC9 : <<include>>
+UC10 .> UC8 : <<extend>>
 @enduml
