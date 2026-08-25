@@ -25,6 +25,6 @@ This repository contains the Requirements Engineering and UML Use-Case Modelling
 |---|---|
 | FR-001, FR-002 | Record Batch Receipt, Monitor Batch Expiry |
 | FR-003 | Generate FEFO Dispensing List |
-| FR-004, FR-005 | Check Re-order Threshold, Generate & Dispatch Purchase Order |
+| FR-004 | Check Re-order Threshold |
+| FR-005 | Generate Purchase Order, Approve Purchase Order, Dispatch Purchase Order, Receive Supplier Acknowledgement |
 | NFR-001, NFR-002 | All system use cases |
-
