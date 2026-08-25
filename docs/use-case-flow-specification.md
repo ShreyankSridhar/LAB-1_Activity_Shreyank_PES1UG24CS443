@@ -35,6 +35,5 @@
 
 1. At Step 8, the supplier endpoint does not return an acknowledgement within the configured timeout.
 2. The system marks the order as `Dispatch Pending`, retains the approved order, and records the failed attempt in the audit log.
-3. The system notifies the Pharmacy Clerk and provides a retry option.
-4. When the clerk selects retry, the system re-dispatches the same uniquely referenced order; it must not create a duplicate purchase order.
-
+3. The system notifies the Pharmacy Clerk and provides the **Retry Failed Dispatch** option.
+4. When the clerk selects **Retry Failed Dispatch**, the system re-dispatches the same uniquely referenced order; it must not create a duplicate purchase order.
